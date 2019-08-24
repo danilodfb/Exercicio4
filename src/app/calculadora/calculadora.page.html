@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>calculadora</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-item>
+  <ion-textarea [(ngModel)]="numero1" placeholder="Digite o primeiro numero"></ion-textarea>
+</ion-item>
+
+<ion-item>
+  <ion-textarea [(ngModel)]="numero2" placeholder="Digite o segundo numero"></ion-textarea>
+</ion-item>
+<ion-item>
+  <ion-label>Operação</ion-label>
+  <ion-select [(ngModel)]="operacao" okText="Okay" cancelText="Dismiss">
+    <ion-select-option value="+">+</ion-select-option>
+    <ion-select-option value="-">-</ion-select-option>
+    <ion-select-option value="*">*</ion-select-option>
+    <ion-select-option value="/">/</ion-select-option>
+  </ion-select>
+
+</ion-item>
+<ion-button (click)="calcular(numero1, numero2,operacao)" expand="full" color="secondary" >Calcular</ion-button>
+</ion-content>
+
